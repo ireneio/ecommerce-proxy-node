@@ -1,6 +1,6 @@
 {
   "name": "proxy",
-  "version": "1.0.0",
+  "version": "1.87.0",
   "private": true,
   "scripts": {
     "build": "cross-env API_KEY=20160918723789416akzuYTRVHCSXISDLjss BASE_URL=https://tst-stayfun.mayohr.com FE_URL=http://localhost:3000  webpack -w",
