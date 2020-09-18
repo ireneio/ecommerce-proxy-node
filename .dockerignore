@@ -4,3 +4,4 @@ npm-debug.log
 .dockerignore
 index.bundle.js
 uploads/
+README.md
