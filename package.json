@@ -6,7 +6,11 @@
     "build": "cross-env API_KEY=20160918723789416akzuYTRVHCSXISDLjss BASE_URL=https://tst-stayfun.mayohr.com FE_URL=http://localhost:3000  webpack -w",
     "dev": "cross-env API_KEY=20160918723789416akzuYTRVHCSXISDLjss BASE_URL=https://tst-stayfun.mayohr.com FE_URL=http://localhost:3000 nodemon ./dist/index.bundle.js",
     "build:prod": "webpack -p",
-    "start": "node ./dist/index.bundle.js"
+    "start": "node ./dist/index.bundle.js",
+    "start:azure": "cross-env API_KEY=20160918723789416akzuYTRVHCSXISDLjss BASE_URL=https://tst-stayfun.mayohr.com FE_URL=https://ecommerce-fe.azurewebsites.net node ./dist/index.bundle.js",
+    "docker:dev": "bash ./docker-build-run.sh",
+    "docker:hub": "bash ./docker-build-push.sh",
+    "azure": "bash ./azure-deploy.sh"
   },
   "dependencies": {
     "@babel/core": "^7.11.5",
@@ -28,10 +32,10 @@
     "node-cron": "^2.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-node-externals": "^2.5.2",
+    "cross-env": "^7.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
-    "cross-env": "^7.0.2"
+    "nodemon": "^2.0.4"
   }
 }

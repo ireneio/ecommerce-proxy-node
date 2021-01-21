@@ -1,4 +1,4 @@
-FROM stayfunfrontend.azurecr.io/node
+FROM node:14
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -10,4 +10,4 @@ RUN npm install --production && npm run build:prod
 
 EXPOSE 8081
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start:azure" ]
